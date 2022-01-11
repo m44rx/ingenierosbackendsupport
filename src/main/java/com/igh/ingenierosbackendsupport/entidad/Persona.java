@@ -1,5 +1,6 @@
 package com.igh.ingenierosbackendsupport.entidad;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,12 +19,18 @@ public class Persona {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idPersona;
+    @Column(length = 100)
     private String nombres;
+    @Column(length = 100)
     private String apellidos;
+    @Column(length = 100)
     private String direccion;
+    @Column(length = 100)
     private String correo;
+    @Column(length = 9)
     private int celular;
     private String foto;
+    // @Column(nullable = false)
     private int numDocumento;
 
     @OneToOne

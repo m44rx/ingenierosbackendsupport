@@ -1,5 +1,6 @@
 package com.igh.ingenierosbackendsupport.entidad;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,11 +18,15 @@ public class Contrato {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY )
     private Integer id;
+    @Column(columnDefinition = "TEXT")
     private String descripcion;
+    @Column(columnDefinition = "TINYINT(1)")
     private Boolean estadoContrato;
+    @Column(length = 8)
     private String codigoContrato;
-    private String lideContrato;
-    private Long precio;
+    @Column(length = 50)
+    private String liderContrato;
+    private Float precio;
 
     @OneToOne(mappedBy = "contrato")
     private Proyecto proyecto;

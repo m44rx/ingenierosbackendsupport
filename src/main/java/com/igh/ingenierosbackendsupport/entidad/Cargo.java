@@ -1,5 +1,6 @@
 package com.igh.ingenierosbackendsupport.entidad;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,6 +18,7 @@ public class Cargo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    @Column(length = 45)
     private String perfil;
 
     @OneToOne(mappedBy = "cargo")

@@ -1,5 +1,6 @@
 package com.igh.ingenierosbackendsupport.entidad;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,10 +18,11 @@ public class CpcHistorico {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String problemas;
-    private Long ganancias;
-    private int faltas;
+    @Column(length = 45)
     private int numeroProyecto;
+    @Column(length = 45)
+    private int numeroContratos;
+    private Float gananciasTotal;
 
     @OneToOne(mappedBy = "cpcHistorico")
     private Proyecto proyecto;

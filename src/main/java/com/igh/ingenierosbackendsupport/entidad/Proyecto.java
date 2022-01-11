@@ -2,6 +2,7 @@ package com.igh.ingenierosbackendsupport.entidad;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,8 +23,11 @@ public class Proyecto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idProyecto;
+    @Column(columnDefinition = "TEXT")
     private String descripcion;
+    @Column(length = 8)
     private String codigoProyecto;
+    @Column(columnDefinition = "TINYINT (1)")
     private Boolean estadoProyecto;
     
     @Temporal(TemporalType.DATE)
