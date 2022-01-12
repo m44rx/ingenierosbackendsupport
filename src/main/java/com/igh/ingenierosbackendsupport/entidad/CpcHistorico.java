@@ -22,6 +22,7 @@ public class CpcHistorico {
     private int numeroProyecto;
     @Column(length = 45)
     private int numeroContratos;
+    @Column(precision = 7, scale = 2)
     private Float gananciasTotal;
 
     @OneToOne(mappedBy = "cpcHistorico")

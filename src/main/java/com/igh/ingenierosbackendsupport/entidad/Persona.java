@@ -27,7 +27,8 @@ public class Persona {
     private String direccion;
     @Column(length = 100)
     private String correo;
-    @Column(length = 9)
+    // @Column(length = 9)
+    @Column(columnDefinition = "INT(9)")
     private int celular;
     private String foto;
     // @Column(nullable = false)

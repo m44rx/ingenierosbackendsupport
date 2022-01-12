@@ -26,6 +26,7 @@ public class Contrato {
     private String codigoContrato;
     @Column(length = 50)
     private String liderContrato;
+    @Column(precision = 7, scale = 2)
     private Float precio;
 
     @OneToOne(mappedBy = "contrato")
